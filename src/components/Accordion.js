@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
+const Accordion = ({ items }) => {
+  const [activeIndex, setActiveIndex] = useState(null)
 
-
-const Accordion = ({ items, onHandleAccordionClick }) => {
-  const handleAccordionClick = (index) => {
-    return onHandleAccordionClick(index)
+  const onTitleClick = (index) => {
+    setActiveIndex(index)
   }
   const renderedItems = items.map((item, index) => {
     return (
