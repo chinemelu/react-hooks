@@ -15,16 +15,11 @@ const items = [
     content: 'You use React by creating components'
   }
 ]
-
-const onHandleAccordionClick = (val) => {
-  console.log('content', val);
-}
 const App = () => {
   return (
     <div>
       <Accordion 
         items={items}
-        onHandleAccordionClick={onHandleAccordionClick}
       />
     </div>
   )
